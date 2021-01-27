@@ -74,8 +74,8 @@ public class LearningLockerService extends Service {
 	public void sendXAPIstatement(ArrayList<String> statements) throws IOException {
 		String lrsAuth = "";
 		for (String statement : statements) {
-			String token = statement.split("\\*")[1];
-			String xAPIStatement = statement.split("\\*")[0];
+			String token = statement.split("\\*\\*\\*")[1];
+			String xAPIStatement = statement.split("\\*\\*\\*")[0];
 
 			logger.warning("New Event using token " + token + ": " + xAPIStatement);
 
